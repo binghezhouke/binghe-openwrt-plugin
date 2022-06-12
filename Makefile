@@ -34,6 +34,11 @@ define Package/binghe-openwrt-plugin/install
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/doh $(1)/usr/bin/doh
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/ddns_ali $(1)/usr/bin/ddns_ali
 	$(INSTALL_DIR) $(PKG_BUILD_DIR)/v2ray $(1)/usr/bin/v2ray
+
+	$(INSTALL_DIR) $(1)/etc/init.d
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/etc/ddns_ali  $(1)/etc/init.d/ddns_ali
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/etc/doh  $(1)/etc/init.d/doh
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/etc/v2ray  $(1)/etc/init.d/v2ray
 endef
 
 $(eval $(call BuildPackage,binghe-openwrt-plugin))
