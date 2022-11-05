@@ -31,7 +31,7 @@ endef
 
 define Package/binghe-openwrt-plugin/install
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/doh $(1)/usr/bin/doh
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/dnsproxy $(1)/usr/bin/doh
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/ddns_ali $(1)/usr/bin/ddns_ali
 	$(INSTALL_DIR) $(PKG_BUILD_DIR)/v2ray $(1)/usr/bin/v2ray
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/gfwlist2dnsmasq.sh $(1)/usr/bin/gfwlist2dnsmasq.sh
