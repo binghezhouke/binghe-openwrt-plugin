@@ -34,6 +34,11 @@ define Package/binghe-openwrt-plugin/install
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/dnsproxy $(1)/usr/bin/doh
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/ddns_ali $(1)/usr/bin/ddns_ali
 	$(INSTALL_DIR) $(PKG_BUILD_DIR)/v2ray $(1)/usr/bin/v2ray
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/v2ray/v2ray $(1)/usr/bin/v2ray/v2ray
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/v2ray/v2ctl $(1)/usr/bin/v2ray/v2ctl
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/v2ray/v2ctl.sig $(1)/usr/bin/v2ray/v2ctl.sig
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/v2ray/geoip.dat $(1)/usr/bin/v2ray/geoip.dat
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/v2ray/geosite.dat $(1)/usr/bin/v2ray/geosite.dat
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/gfwlist2dnsmasq.sh $(1)/usr/bin/gfwlist2dnsmasq.sh
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/update_gfwlist.sh $(1)/usr/bin/v2ray/update_gfwlist.sh
 
